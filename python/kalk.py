@@ -8,7 +8,7 @@ field_text=""
 
 def add_sth(sth):
     global field_text
-    field_text=field_text+str(sth)
+    field_text=str(field_text)+str(sth)
     lbl.delete("1.0", "end")
     lbl.insert("1.0", field_text)
 
@@ -25,9 +25,9 @@ def ce():
 
 def perce():
     global field_text
-    percent=float(field_text)/100
+    field_text=float(field_text)/100
     lbl.delete("1.0", "end")
-    lbl.insert("1.0", percent)
+    lbl.insert("1.0", field_text)
 
 lbl = tk.Text(master=window, font=5, height=2, width=20)
 frm_calc = tk.Frame(master=window)
